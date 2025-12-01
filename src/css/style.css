@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.grille {
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr;
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-areas:
+    "A C D"
+    "A C E"
+    "B C E";
+}
+
+.grille > div {
+  border: 1px solid green;
+}
+
+.div1 {
+  grid-area: A;
+}
+.div2 {
+  grid-area: B;
+}
+.div3 {
+  grid-area: C;
+}
+.div4 {
+  grid-area: D;
+}
+.div5 {
+  grid-area: E;
+}
+
+.grillediv1 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "A C D"
+    "B C E"
+    "B C E";
+}
+
+.grillediv1 > div {
+  border: 1px solid green;
+}
+
+.div1_01 {
+  grid-area: A;
+}
+.div1_02 {
+  grid-area: B;
+}
+.div1_03 {
+  grid-area: C;
+}
+.div1_04 {
+  grid-area: D;
+}
+.div1_05 {
+  grid-area: E;
+}
+
+.grillediv2 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "A B C"
+    "A B C"
+    "A B C";
+}
+
+.grillediv2 > div {
+  border: 1px solid green;
+}
+
+.div2_01 {
+  grid-area: A;
+}
+.div2_02 {
+  grid-area: B;
+}
+.div2_03 {
+  grid-area: C;
+}
+
+.grillediv3 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "A A A"
+    "B B B"
+    "C C C";
+}
+
+.grillediv3 > div {
+  border: 1px solid green;
+}
+
+.div3_01 {
+  grid-area: A;
+}
+.div3_02 {
+  grid-area: B;
+}
+.div3_03 {
+  grid-area: C;
+}
+
+.grillediv4 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "A A A A"
+    "A A A A"
+    "B B C C"
+    "B B C C";
+}
+
+.grillediv4 > div {
+  border: 1px solid green;
+}
+
+.div4_01 {
+  grid-area: A;
+}
+.div4_02 {
+  grid-area: B;
+}
+.div4_03 {
+  grid-area: C;
+}
+
+.grillediv5 {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "A A B B"
+    "A A B B"
+    "C C D D"
+    "C C D D";
+}
+
+.grillediv5 > div {
+  border: 1px solid green;
+}
+
+.div5_01 {
+  grid-area: A;
+}
+.div5_02 {
+  grid-area: B;
+}
+.div5_03 {
+  grid-area: C;
+}
+.div5_04 {
+  grid-area: D;
+}
