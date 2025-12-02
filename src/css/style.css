@@ -7,6 +7,15 @@ body {
   overflow: hidden;
 }
 
+.div4_02 {
+  height: 100%;
+}
+
+#barre_div4_02 {
+  width: 100%;
+  height: 100%;
+}
+
 .grille {
   width: 90vw;
   height: 90vh;
@@ -156,6 +165,7 @@ body {
 .div4_02 {
   grid-area: B;
 }
+
 .div4_03 {
   grid-area: C;
 }
@@ -190,4 +200,37 @@ body {
 }
 .div5_04 {
   grid-area: D;
+}
+
+.horloge {
+  border-radius: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0.5vmax solid orange;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.seconde {
+  border-radius: 100%;
+  background: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.25vmax;
+  margin-top: -0.25vmax;
+  width: 0.5vmax;
+  height: 45%;
+  z-index: 2;
+  transform-origin: 50% 0%;
+}
+
+.radar {
+  width: 1cqw;
+  height: 1cqw;
+  position: absolute;
+  background: #5cd3d5;
+  border-radius: 50%;
+  top: 75%;
+  left: 50%;
 }

@@ -6,6 +6,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const barre03 = document.getElementById("barre_div1_03");
   const barre04 = document.getElementById("barre_div1_04");
   const barre05 = document.getElementById("barre_div1_05");
+  // const barre06 = document.getElementById("barre_div4_02");
+
+  // let graphique06 = new Chart(barre06, {
+  //   type: "bar",
+  //   data: {
+  //     labels: ["Mercure", "Vénus", "Terre", "Mars", "Jupiter", "Saturne", "Uranus", "Neptune"],
+  //     datasets: [
+  //       {
+  //         label: "",
+  //         data: [87.969256, 224.6997056, 365.256363051, 686.979852, 4332.589, 10759.23, 30685.4, 60266],
+  //         borderWidth: 2,
+  //         borderColor: "#E28811",
+  //         backgroundColor: "#5CD3D5",
+  //       },
+  //     ],
+  //   },
+  //   options: {
+  //     responsive: true,
+  //     maintainAspectRatio: false,
+  //     indexAxis: "y",
+
+  //     plugins: {
+  //       title: { display: false },
+  //       legend: { display: false },
+  //     },
+
+  //     scales: {
+  //       x: {
+  //         display: false,
+  //         grid: { display: false },
+  //       },
+  //       y: {
+  //         display: false,
+  //         grid: { display: false },
+  //       },
+  //     },
+  //   },
+  // });
+
+  // setInterval(() => {
+  //   for (let ds of graphique06.data.datasets) {
+  //     for (let i = 0; i < ds.data.length; i++) {
+  //       ds.data[i] = Math.round(Math.random() * 80 + 20);
+  //     }
+  //   }
+  //   graphique06.update();
+  // }, 500);
 
   let graphique01 = new Chart(barre01, {
     type: "bar",
@@ -107,12 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
             { x: 20, y: 30 },
             { x: 30, y: 70 },
             { x: 40, y: 20 },
-            { x: 50, y: 90 },
-            { x: 60, y: 90 },
-            { x: 70, y: 90 },
-            { x: 80, y: 90 },
-            { x: 90, y: 90 },
-            { x: 100, y: 90 },
+            { x: 50, y: 20 },
+            { x: 60, y: 20 },
+            { x: 70, y: 20 },
+            { x: 80, y: 20 },
+            { x: 90, y: 20 },
           ],
           backgroundColor: "#5CD3D5",
           borderColor: "#E28811",
