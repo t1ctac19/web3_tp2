@@ -8,7 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://esm.sh/maplibre-gl@5.13.0/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css" />
 
     <link rel="stylesheet" href="./src/css/style.css" />
 
@@ -19,13 +19,18 @@
           "animejs": "./node_modules/animejs/dist/bundles/anime.esm.js",
           "chart.js": "./node_modules/chart.js/auto/auto.js",
           "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
-          "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0"
+          "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
+          "zzz": "https://esm.sh/zdog",
+          "tone.js": "https://esm.sh/tone@15.1.22"
         }
       }
     </script>
 
+    <script type="module" src="./src/js/maplibre.js"></script>
     <script type="module" src="./src/js/animejs.js"></script>
     <script type="module" src="./src/js/chartjs.js"></script>
+    <script type="module" src="./src/js/zdog.js"></script>
+    <script type="module" src="./src/js/tonejs.js"></script>
 
     <script src="./src/js/bootstrap.js" defer></script>
   </head>
@@ -57,7 +62,7 @@
       </div>
       <div class="div4">
         <div class="grillediv4">
-          <div class="div4_01"><div id="barre_div4_01"></div></div>
+          <div id="carte"></div>
           <div class="div4_02">
             <div class="horloge">
               <div class="seconde"></div>
@@ -69,10 +74,7 @@
       </div>
       <div class="div5">
         <div class="grillediv5">
-          <div class="div5_01"><canvas id="barre_div5_01"></canvas></div>
-          <div class="div5_02"><canvas id="barre_div5_02"></canvas></div>
-          <div class="div5_03"><canvas id="barre_div5_03"></canvas></div>
-          <div class="div5_03"><canvas id="barre_div5_04"></canvas></div>
+          <div class="div5_01"><canvas class="zdog-canvas"></canvas></div>
         </div>
       </div>
     </div>

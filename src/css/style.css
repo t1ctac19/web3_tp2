@@ -159,8 +159,13 @@ body {
   border: 1px solid green;
 }
 
-.div4_01 {
+#carte {
   grid-area: A;
+  width: 60%;
+  height: 100%;
+  border-radius: 100%;
+  border: 9px solid #5cd3d5;
+  place-self: center;
 }
 .div4_02 {
   grid-area: B;
@@ -176,13 +181,9 @@ body {
   border: 1px solid red;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "A A B B"
-    "A A B B"
-    "C C D D"
-    "C C D D";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "A";
 }
 
 .grillediv5 > div {
@@ -192,21 +193,18 @@ body {
 .div5_01 {
   grid-area: A;
 }
-.div5_02 {
-  grid-area: B;
-}
-.div5_03 {
-  grid-area: C;
-}
-.div5_04 {
-  grid-area: D;
+
+.zdog-canvas {
+  width: 100%;
+  height: 100%;
+  place-self: center;
 }
 
 .horloge {
   border-radius: 100%;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border: 0.5vmax solid orange;
+  border: 0.5vmax solid #ffa500;
   background: rgba(0, 0, 0, 0.2);
   position: relative;
 }
