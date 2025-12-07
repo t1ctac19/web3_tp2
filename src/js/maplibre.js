@@ -26,7 +26,7 @@ carte.on("style.load", () => {
 
   carte.addLayer(
     {
-      id: "3d-buildings",
+      id: "3d_buildings",
       source: "openfreemap",
       "source-layer": "building",
       type: "fill-extrusion",

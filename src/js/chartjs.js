@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const barre03 = document.getElementById("barre_div1_03");
   const barre04 = document.getElementById("barre_div1_04");
   const barre05 = document.getElementById("barre_div1_05");
+  const barre06 = document.getElementById("barre_div3_02");
+  const barre07 = document.getElementById("barre_div3_03");
 
   let graphique01 = new Chart(barre01, {
     type: "bar",
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [
         {
           label: "",
-          data: [90, 225, 365, 685, 4335, 10760, 30685, 60265],
+          data: [90, 22, 36, 68, 43, 10, 30, 60],
           borderWidth: 2,
           borderColor: "#E28811",
           backgroundColor: "#5CD3D5",
@@ -60,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [
         {
           data: [1, 2, 3, 4],
-          backgroundColor: ["#E28811", "#213CD5", "#DFA60B", "#5CD3D5"],
+          backgroundColor: ["#E28811", "#2Ac6d0", "#DFA60B", "#5CD3D5"],
           hoverOffset: 20,
           borderWidth: 0,
           borderRadius: 1,
@@ -148,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let ds of graphique03.data.datasets) {
       for (let i = 0; i < ds.data.length; i++) {
         const currentY = parseFloat(ds.data[i].y);
-        const random = Math.round(Math.random() * 20000 - 10000);
+        const random = Math.round(Math.random() * 200 - 100);
         ds.data[i].y = Math.max(0, currentY + random);
       }
     }
@@ -161,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
       labels: ["A", "B", "C", "D", "E", "F", "G", "H"],
       datasets: [
         {
-          data: [90, 225, 365, 685, 4335, 10760, 30685, 60265],
+          data: [90, 22, 36, 68, 43, 10, 30, 60],
           borderWidth: 2,
           borderColor: "#E28811",
           backgroundColor: "#5CD3D5",
@@ -205,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
       labels: ["A", "B", "C", "D", "E", "F", "G", "H"],
       datasets: [
         {
-          data: [90, 225, 365, 685, 4335, 10760, 30685, 60265],
+          data: [90, 22, 36, 68, 43, 10, 30, 60],
           borderWidth: 2,
           borderColor: "#E28811",
           backgroundColor: "#5CD3D5",
@@ -241,5 +243,93 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     graphique05.update();
+  }, 300);
+
+  let graphique06 = new Chart(barre06, {
+    type: "bubble",
+    data: {
+      labels: ["Travaux créatifs"],
+      datasets: [
+        {
+          data: [
+            { x: 0, y: 54, r: 50 },
+            { x: 1, y: 32, r: 32 },
+          ],
+          backgroundColor: "#E28811",
+        },
+        {
+          data: [
+            { x: 0, y: 43, r: 43 },
+            { x: 1, y: 62, r: 55 },
+          ],
+          backgroundColor: "#5CD3D5",
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+
+      plugins: {
+        title: { display: false },
+        legend: { display: false },
+      },
+
+      scales: {
+        x: {
+          display: false,
+          grid: { display: false },
+        },
+        y: {
+          display: false,
+          grid: { display: false },
+        },
+      },
+    },
+  });
+
+  setInterval(() => {
+    for (let ds of graphique06.data.datasets) {
+      for (let i = 0; i < ds.data.length; i++) {
+        const random = Math.round(Math.random() * 50 + 10);
+        ds.data[i].r = ds.data[i].y = Math.max(0, random);
+      }
+    }
+    graphique06.update();
+  }, 1000);
+
+  let graphique07 = new Chart(barre07, {
+    type: "doughnut",
+    data: {
+      labels: ["A", "B", "C", "D"],
+      datasets: [
+        {
+          data: [1, 2, 3, 4],
+          backgroundColor: ["#2Ac6d0", "#E28811", "#5CD3D5", "#DFA60B"],
+          borderWidth: 0,
+          borderRadius: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: "0%",
+      plugins: {
+        title: {
+          display: false,
+        },
+        legend: { display: false },
+      },
+    },
+  });
+
+  setInterval(() => {
+    for (let ds of graphique07.data.datasets) {
+      for (let i = 0; i < ds.data.length; i++) {
+        ds.data[i] = Math.round(Math.random() * 40 + 10);
+      }
+    }
+    graphique07.update();
   }, 300);
 });

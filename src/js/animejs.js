@@ -1,6 +1,4 @@
-import { animate, utils } from "https://esm.sh/animejs";
-
-utils.set(".seconde,.minute", { rotate: "180" });
+import { animate, utils } from "animejs";
 
 const snapTo10 = utils.snap(10);
 snapTo10(94); // 90
@@ -13,17 +11,24 @@ animate(".seconde", {
   loop: true,
 });
 
-animate(".minute", {
-  rotate: ["-360", "0"],
-  modifier: utils.snap(0.25),
-  duration: 3000,
+animate(".radar", {
+  opacity: 1,
+  duration: 1000,
+  opacity: 0,
   loop: true,
   ease: "linear",
 });
 
-animate(".radar", {
+animate(".seconde2", {
+  rotate: ["180", "-180"],
+  duration: 3000,
+  playbackEase: "linear",
+  loop: true,
+});
+
+animate(".radar2", {
   opacity: 1,
-  duration: 1000,
+  duration: 3000,
   opacity: 0,
   loop: true,
   ease: "linear",

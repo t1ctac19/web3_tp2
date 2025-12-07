@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Droido;
+  src: url(/font/alien_font/DroidobeshDepot-gxmVE.otf);
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -19,7 +24,7 @@ body {
 .grille {
   width: 90vw;
   height: 90vh;
-  border: 1px solid red;
+  border: 3px solid #ffa500;
 
   display: grid;
   grid-template-columns: 5fr 2fr 3fr;
@@ -31,7 +36,7 @@ body {
 }
 
 .grille > div {
-  border: 1px solid green;
+  border: 1px solid #ffa500;
 }
 
 .div1 {
@@ -53,7 +58,6 @@ body {
 .grillediv1 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -65,7 +69,7 @@ body {
 }
 
 .grillediv1 > div {
-  border: 1px solid green;
+  border: 3px solid #ffa500;
 }
 
 .div1_01 {
@@ -87,7 +91,6 @@ body {
 .grillediv2 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -99,7 +102,7 @@ body {
 }
 
 .grillediv2 > div {
-  border: 1px solid green;
+  border: 3px solid #ffa500;
 }
 
 .div2_01 {
@@ -115,7 +118,6 @@ body {
 .grillediv3 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -127,11 +129,12 @@ body {
 }
 
 .grillediv3 > div {
-  border: 1px solid green;
+  border: 3px solid #ffa500;
 }
 
 .div3_01 {
   grid-area: A;
+  overflow: hidden;
 }
 .div3_02 {
   grid-area: B;
@@ -143,7 +146,6 @@ body {
 .grillediv4 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -156,7 +158,7 @@ body {
 }
 
 .grillediv4 > div {
-  border: 1px solid green;
+  border: 3px solid #ffa500;
 }
 
 #carte {
@@ -178,7 +180,6 @@ body {
 .grillediv5 {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -187,7 +188,7 @@ body {
 }
 
 .grillediv5 > div {
-  border: 1px solid green;
+  border: 3px solid #ffa500;
 }
 
 .div5_01 {
@@ -231,4 +232,91 @@ body {
   border-radius: 50%;
   top: 75%;
   left: 50%;
+}
+.horloge2 {
+  border-radius: 100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0.5vmax solid #5cd3d5;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.seconde2 {
+  border-radius: 100%;
+  background: #5cd3d5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.25vmax;
+  margin-top: -0.25vmax;
+  width: 0.5vmax;
+  height: 45%;
+  z-index: 2;
+  transform-origin: 50% 0%;
+}
+
+.radar2 {
+  width: 1cqw;
+  height: 1cqw;
+  position: absolute;
+  background: orange;
+  border-radius: 50%;
+  top: 15%;
+  left: 35%;
+}
+
+#barre_div2_02 {
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+#barre_div2_03 {
+  width: 75%;
+  height: 30%;
+  display: block;
+  margin: auto;
+  margin-top: 25%;
+  font-family: "Droido";
+}
+
+#barre_div2_01 {
+  display: block;
+  margin: auto;
+  margin-top: 25%;
+  border: 1px dotted #5cd3d5;
+  width: 90%;
+  color: #ffa500;
+  font-family: "Droido";
+  text-align: center;
+}
+
+#barre_div3_01 {
+  display: block;
+  margin: auto;
+  margin-top: 45%;
+  border: 1px dotted #ffa500;
+  width: 90%;
+  color: #5cd3d5;
+  font-family: "Droido";
+  text-align: center;
+}
+
+#barre_div3_02 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+
+#barre_div3_03 {
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
 }
